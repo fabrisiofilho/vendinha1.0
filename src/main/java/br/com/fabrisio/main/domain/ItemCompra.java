@@ -7,12 +7,15 @@ import java.math.BigDecimal;
  */
 public class ItemCompra {
 
+    
+    private String nome;
     private Produto p;
     private Integer qtd;
     private BigDecimal total;
 
     public ItemCompra(Produto p, Integer qtd){
         
+        this.nome = p.getNome();
         BigDecimal valor = p.getValor();
         this.qtd = qtd;
         this.total = valor.multiply(BigDecimal.valueOf(qtd));
@@ -28,6 +31,10 @@ public class ItemCompra {
     
     public Integer getQtd() {
         return qtd;
+    }
+
+    public String getNome() {
+        return nome;
     }
     
  

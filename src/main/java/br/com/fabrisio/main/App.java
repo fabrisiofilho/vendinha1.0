@@ -20,12 +20,14 @@ public class App {
         Compra c = new Compra(p1, 3);
         c.addList(p3, 5);
         c.addList(p2, 2);
+        c.addList(p2, 8);
+        c.addList(p1, 2);
         
         System.out.println("Id.........: " + j.getId());
         System.out.println("Nome.......: " + j.getNome());
         c.mostrarItens();
         
-        c.confirmarPagamento(BigDecimal.valueOf(10000.00));
+        c.confirmarPagamento(BigDecimal.valueOf(100000.00));
         
     }
 }

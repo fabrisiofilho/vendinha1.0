@@ -43,7 +43,7 @@ public class Compra {
     
     public void mostrarItens(){;
         for (ItemCompra iten : itens) {
-            System.out.println(": ("+iten.getQtd() + ").......:"+ iten.getTotal());
+            System.out.println(iten.getNome() + ": ("+iten.getQtd() + ").......:"+ iten.getTotal());
             TotalBig = TotalBig.add(iten.getTotal());
         }
         System.out.println("Total.......: " + TotalBig);
