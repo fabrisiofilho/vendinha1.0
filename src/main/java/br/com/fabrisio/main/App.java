@@ -25,7 +25,7 @@ public class App {
         System.out.println("Nome.......: " + j.getNome());
         c.mostrarItens();
         
-        c.confirmarPagamento(BigDecimal.valueOf(20000.00));
+        c.confirmarPagamento(BigDecimal.valueOf(10000.00));
         
     }
 }

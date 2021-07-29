@@ -24,7 +24,7 @@ public class Compra {
     }
     
     public void confirmarPagamento(BigDecimal saldo){
-        
+        System.out.println("Valor do cliente:"+ saldo);
         if(saldo.compareTo(TotalBig) == 1){
             saldo = saldo.subtract(TotalBig);
             System.out.println( "Status do pagamento : " + getStatus(saldo));
@@ -43,19 +43,23 @@ public class Compra {
     
     public void mostrarItens(){;
         for (ItemCompra iten : itens) {
-            System.out.println( iten.getP().getNome() + ": ("+iten.getQtd() + ").......:"+ iten.getTotal());
+            System.out.println(": ("+iten.getQtd() + ").......:"+ iten.getTotal());
             TotalBig = TotalBig.add(iten.getTotal());
         }
         System.out.println("Total.......: " + TotalBig);
+        System.out.println("Status do pagamento : " + getStatusAguardando());
     }
     
+    public EnumStatus getStatusAguardando(){
+        return EnumStatus.Aguardando;
+    }
     
     public EnumStatus getStatus (BigDecimal troco){
         
         BigDecimal zero = BigDecimal.valueOf(0); 
         
         if(troco.compareTo(zero) == 1){
-            return EnumStatus.Aguardando;
+            return EnumStatus.Pago;
         }
         if(troco.compareTo(zero) == -1){
             return EnumStatus.Cancelado;
