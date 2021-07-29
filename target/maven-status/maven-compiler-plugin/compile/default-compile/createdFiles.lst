@@ -1,0 +1,6 @@
+br\com\fabrisio\main\domain\Compra.class
+br\com\fabrisio\main\domain\ItemCompra.class
+br\com\fabrisio\main\domain\Cliente.class
+br\com\fabrisio\main\domain\Produto.class
+br\com\fabrisio\main\domain\EnumStatus.class
+br\com\fabrisio\main\App.class
